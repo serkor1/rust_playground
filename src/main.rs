@@ -1,5 +1,5 @@
 use rust_playground::simple_approach::sma::simple_moving_average;
-use rust_playground::optimized_approach::sma_struct::sma_container;
+use rust_playground::optimized_approach::sma_struct::SMAStruct;
 
 fn main() {
     // construct vector
@@ -23,7 +23,7 @@ fn main() {
     // For later studies
     let new_vector: Vec<f64> = vec![1.0, 2.0, 3.0, 4.0, 5.0, 6.0];
 
-    let container = sma_container {
+    let container = SMAStruct {
         x: new_vector, // might be illegal to reuse. Lets see.
         window_size: 2
     };

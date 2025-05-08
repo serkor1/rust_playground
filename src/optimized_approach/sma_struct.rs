@@ -4,7 +4,7 @@
 //
 // These structs are similar to Python
 // class in  syntax
-pub struct sma_container {
+pub struct SMAStruct {
     // holds the passed 
     // series
     pub x: Vec<f64>,
@@ -30,24 +30,27 @@ pub struct sma_container {
     // "IT WORKS IN THE EXAMPLE...."
 }
 
-impl sma_container {
+impl SMAStruct {
     pub fn calculate(&self) -> () {
         // the same implementation
         // but with more steps
 
         // calculate length
-        let N: usize = self.x.len();
+        let vector_size: usize = self.x.len();
 
         // define slices
-        let int_slice = &self.x[..];
+        // let int_slice = &self.x[..];
         let iter = self.x.windows(self.window_size);
 
-        println!("Length: {}", N);
+        println!("Length: {}", vector_size);
         for window in iter {
-            unsafe {
-                let window_mean: f64 = window.iter().sum::<f64>() / self.window_size as f64;
-                println!("SMA {}", window_mean);
-            }
+            let window_mean: f64 = window.iter().sum::<f64>() / self.window_size as f64;
+            println!("SMA {}", window_mean);
+            // unsafe {
+            //     let window_mean: f64 = window.iter().sum::<f64>() / self.window_size as f64;
+            //     println!("SMA {}", window_mean);
+            // }
+            // NOTE: unsafe is for pointer arithmatrics. Not iterators.
         }
     }
 }
