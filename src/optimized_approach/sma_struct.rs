@@ -1,4 +1,3 @@
-use std::slice::Windows;
 
 // See here: https://doc.rust-lang.org/stable/book/ch18-03-oo-design-patterns.html
 // for more details
@@ -41,7 +40,7 @@ impl sma_container {
 
         // define slices
         let int_slice = &self.x[..];
-        let mut iter = self.x.windows(self.window_size);
+        let iter = self.x.windows(self.window_size);
 
         println!("Length: {}", N);
         for window in iter {

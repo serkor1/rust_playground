@@ -1,4 +1,3 @@
-use std::slice::Windows;
 
 // foo() -> return type
 pub fn simple_moving_average( 
@@ -11,7 +10,7 @@ pub fn simple_moving_average(
 
         // slice the vector
         let int_slice = &x[..];
-        let mut iter = x.windows(window_size);
+        let iter = x.windows(window_size);
 
         // generate an array container
         // of foats
