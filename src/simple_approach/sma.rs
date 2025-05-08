@@ -1,7 +1,7 @@
 
 // foo() -> return type
 pub fn simple_moving_average( 
-    x: Vec<f64>, 
+    x: &Vec<f64>, 
     window_size: usize) -> Vec<f64> {
 
         // extract the length

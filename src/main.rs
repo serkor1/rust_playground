@@ -8,7 +8,7 @@ fn main() {
     let vector_numeric: Vec<f64> = vec![1.0, 2.0, 3.0, 4.0, 5.0, 6.0];
 
     // call function
-    let output_value =simple_moving_average(vector_numeric, 2);
+    let output_value =simple_moving_average(&vector_numeric, 2);
     println!(
         "First {:?}", output_value
     );
