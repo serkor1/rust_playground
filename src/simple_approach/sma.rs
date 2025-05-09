@@ -18,7 +18,7 @@ pub fn simple_moving_average(
         let mut output_array: Vec<f64> = vec![0.0; output_array_lenght];
         //let mut output_array: [f64; output_array_lenght] = [0.00; output_array_lenght];
 
-        println!("Length: {}", vector_size);
+        // println!("Length: {}", vector_size);
         let mut idx = 0;
         for window in iter {
             let window_mean: f64 = window.iter().sum::<f64>() / window_size as f64;

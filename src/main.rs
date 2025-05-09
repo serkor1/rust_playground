@@ -1,5 +1,6 @@
 use rust_playground::simple_approach::sma::simple_moving_average;
 use rust_playground::optimized_approach::sma_struct::SMAStruct;
+use rust_playground::unsafe_approach::sma::simple_moving_average_pointer;
 
 fn main() {
     // construct vector
@@ -29,5 +30,11 @@ fn main() {
     };
 
     container.calculate();
+
+
+    // unsafe approach
+    let output_value = simple_moving_average_pointer(&vector_numeric, 2);
+    println!("Pointer: {:?}", output_value);
+
     
 }
